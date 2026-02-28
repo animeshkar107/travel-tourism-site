@@ -1,0 +1,796 @@
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #154c6f;
+    padding: 15px 40px;
+}
+
+/* Logo */
+.logo a {
+   font-size: 26px;
+    font-weight: bold;
+    color: #ffc107;  
+}
+
+/* Right side container */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;   /* 👈 Perfect spacing */
+}
+
+/* Welcome text */
+.welcome{
+    color: white;
+    font-weight: 500;
+}
+
+/* Links */
+.nav-right a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-right a:hover {
+    color: #ffcc33;
+}
+
+/* Logout button style */
+.logout-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0;
+}
+
+.logout-btn:hover {
+    color: #ffcc33;
+}
+
+/* ===================== */
+/* HERO SECTION */
+/* ===================== */
+
+.home-section {
+    text-align: center;
+    padding: 120px 20px 80px;
+    background: linear-gradient(135deg, #154c6f, #1d6fa5);
+    color: white;
+}
+
+.home-section h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.home-section p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    opacity: 0.9;
+}
+
+/* ===================== */
+/* BUTTONS */
+/* ===================== */
+
+.dashboard-actions {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.dashboard-btn {
+    padding: 14px 35px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Hover pop-out effect */
+.dashboard-btn:hover {
+    transform: translateY(-6px) scale(1.05);
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+
+.login-btn {
+    background: white;
+    color: #154c6f;
+}
+
+.login-btn:hover {
+    background: #f2f2f2;
+}
+
+/* ===================== */
+/* ABOUT SECTION */
+/* ===================== */
+
+.about {
+    max-width: 800px;
+    margin: 60px auto 40px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    transform: translateY(-6px);
+}
+
+/* Background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+}
+
+/* Center container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+/* Card */
+.form-card {
+    background: #ffffff;
+    padding: 40px;
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Heading */
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+/* Forgot password link */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.forgot-password a {
+    font-size: 14px;
+    color: #154c6f;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.forgot-password a:hover {
+    color: #ffcc33;
+}
+
+/* Reset info text */
+.reset-info {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #4e73df;
+    outline: none;
+    box-shadow: 0 0 8px rgba(78,115,223,0.3);
+}
+
+/* Button */
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;   
+}
+
+.btn-register:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Error message */
+.error-msg {
+    background: #ffe6e6;
+    color: #cc0000;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Bottom text */
+.bottom-text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.bottom-text a {
+    color: #4e73df;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bottom-text a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.error-msg {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.booking-form {
+    width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.input-wrapper {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.btn-book {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Container styling */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #185a9d,#43cea2);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Card styling */
+.auth-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 350px;
+    text-align: center;
+    animation: slideUp 1.2s ease forwards;
+}
+.auth-card:hover {
+    transform: translateY(-5px); /* subtle lift effect */
+    box-shadow: 0 14px 30px rgba(0,0,0,0.25); /* deeper shadow */
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Heading */
+.auth-card h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #2575fc;
+}
+
+/* Forgot password link */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.forgot-password a {
+    font-size: 0.85rem;
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Button styling */
+.auth-btn {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Register link */
+.auth-link {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.auth-link a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+.packages-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.packages-header h1 {
+    font-size: 32px;
+    color: #0a3d62;
+}
+
+.packages-header p {
+    color: #555;
+}
+
+/* Grid Layout */
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Package Card */
+.package-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image */
+.package-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Content */
+.package-content {
+    padding: 20px;
+}
+
+.package-content h3 {
+    margin-bottom: 10px;
+    color: #0a3d62;
+}
+
+.destination {
+    font-weight: bold;
+    color: #f6b93b;
+    margin-bottom: 5px;
+}
+
+.duration {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a3d62;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.package-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #0a3d62;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.package-btn:hover {
+    background-color: #f6b93b;
+    color: black;
+}
+
+
+.booking-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-delete {
+    background: #ff4d4d;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-delete:hover {
+    background: #cc0000;
+}
+
+.btn-pay {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.bookings-header {
+    text-align: center;
+    font-size: 28px;
+    margin: 40px 0 30px;
+    color: #1e3c72;
+    font-weight: 700;
+}
+
+.bookings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.booking-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.booking-card:hover {
+    transform: translateY(-3px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-header h3 {
+    font-size: 20px;
+    color: #0a3d62;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+.status.confirmed {
+    background: #28a745;
+}
+
+.status.pending {
+    background: #ffc107;
+    color: #333;
+}
+
+.status.cancelled {
+    background: #dc3545;
+}
+
+.card-body p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-pay {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-pay:hover {
+    background: linear-gradient(135deg, #16305f, #1f3f7a);
+    transform: scale(1.05);
+}
+
+.cancel-form {
+    display: inline;
+}
+
+.btn-cancel {
+    padding: 10px 20px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cancel:hover {
+    background: #a71d2a;
+    transform: scale(1.05);
+}
+
+.no-bookings {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-top: 30px;
+}
+
+.package-title {
+    margin-bottom: 20px;
+    color: #1e3c72;
+    font-size: 22px;
+}
+
+.package-info {
+    background: #f5f7fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.package-info p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.package-info span {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;       /* align label and input horizontally */
+    gap: 15px;                 /* space between label and input */
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    flex: 0 0 auto;            /* label takes only its natural width */
+    font-weight: 600;
+}
+
+.form-group input {
+    flex: 0 0 80px;            /* input box fixed width: ~3 columns */
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.pay-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;   /* make text color visible */
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.pay-btn:hover {
+    background: linear-gradient(to right, #16305f, #1f3f7a);
+    transform: scale(1.02);
+}
+
+.cancel-btn-wrapper {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+.cancel-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.errorlist {
+    color: red;
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}

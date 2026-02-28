@@ -1,0 +1,44 @@
+{% extends 'tour/base.html' %}
+
+{% block content %}
+<div class="form-container">
+    <div class="form-card">
+        <h2>Create Account</h2>
+
+        {% if messages %}
+            {% for message in messages %}
+                <p class="error-msg">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" name="username" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <label>Confirm Password</label>
+            <input type="password" name="confirm_password" required>
+
+            <button type="submit" class="btn-register">Register</button>
+        </form>
+
+        <p class="bottom-text">
+            Already have an account?
+            <a href="{% url 'login' %}">Login</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'tour/base.html' %} {% block content %}
+
+<div class="form-container">
+  <div class="form-card">
+    <h2>Payment</h2>
+
+    <p><strong>Package:</strong> {{ booking.package.name }}</p>
+    <p><strong>Amount:</strong> ₹{{ booking.package.price }}</p>
+    <p><strong>Status:</strong> {{ booking.status }}</p>
+
+    <form method="POST">
+      {% csrf_token %}
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

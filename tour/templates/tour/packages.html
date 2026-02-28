@@ -1,0 +1,39 @@
+{% extends 'tour/base.html' %}
+
+{% block content %}
+
+<div class="packages-header">
+    <h1>Explore Our Tour Packages</h1>
+    <p>Choose your dream destination and travel with us.</p>
+</div>
+
+<div class="packages-grid">
+    {% for p in packages %}
+    <div class="package-card">
+        
+        {% if p.destination.image %}
+        <div class="package-img">
+            <img src="{{ p.destination.image.url }}" alt="{{ p.title }}">
+        </div>
+        {% endif %}
+        
+        <div class="package-content">
+            <h3>{{ p.title }}</h3>
+            <p class="destination">{{ p.destination.name }}</p>
+            <p class="duration">Duration: {{ p.duration }}</p>
+            <p class="price">₹{{ p.price }}</p>
+
+            {% if user.is_authenticated %}
+                <a href="{% url 'book' p.id %}" class="package-btn">Book Now</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="package-btn">Login to Book</a>
+            {% endif %}
+        </div>
+
+    </div>
+    {% empty %}
+        <p>No packages available.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}

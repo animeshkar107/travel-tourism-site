@@ -1,0 +1,46 @@
+{% extends 'tour/base.html' %}
+{% block content %}
+
+<h2 class="bookings-header">My Bookings</h2>
+
+<div class="bookings-container">
+    {% if bookings %}
+        {% for b in bookings %}
+        <div class="booking-card">
+            <div class="card-header">
+                <h3>{{ b.package.title }}</h3>
+                {% if b.status == "Confirmed" %}
+                    <span class="status confirmed">Confirmed ✅</span>
+                {% elif b.status == "Pending" %}
+                    <span class="status pending">Pending ⏳</span>
+                {% else %}
+                    <span class="status cancelled">Cancelled ❌</span>
+                {% endif %}
+            </div>
+
+            <div class="card-body">
+                <p><strong>Booking Date:</strong> {{ b.booking_date|date:"d M Y H:i" }}</p>
+                <p><strong>Destination:</strong> {{ b.package.destination }}</p>
+                <p><strong>Duration:</strong> {{ b.package.duration }}</p>
+                <p><strong>Persons:</strong> {{ b.persons }}</p>
+                <p><strong>Total:</strong> ₹{{ b.total_amount }}</p>
+            </div>
+
+            <div class="card-actions">
+                {% if b.status == "Pending" %}
+                <a href="{% url 'payment' b.id %}" class="btn-pay">Proceed to Payment 💳</a>
+
+                <form action="{% url 'delete_booking' b.id %}" method="POST" class="cancel-form">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-cancel">Cancel ✖</button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p class="no-bookings">You have no bookings yet.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

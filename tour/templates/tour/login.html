@@ -1,0 +1,38 @@
+{% extends 'tour/base.html' %}
+
+{% block content %}
+
+<div class="auth-container">
+    <div class="auth-card">
+        <h2>Login to Your Account</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="input-group">
+                <label>Username</label>
+                {{ form.username }}
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                {{ form.password }}
+            </div>
+
+            <div class="forgot-password">
+                <a href="{% url 'password_reset' %}">
+                    Forgot Password?
+                </a>
+            </div>
+
+            <button type="submit" class="auth-btn">Login</button>
+        </form>
+
+        <p class="auth-link">
+            Don't have an account?
+            <a href="{% url 'register' %}">Register</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}

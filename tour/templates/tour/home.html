@@ -1,0 +1,31 @@
+{% extends 'tour/base.html' %}
+
+{% block content %}
+
+<div class="home-section">
+    <h1>Welcome to Travel Site</h1>
+    <p>Explore the world with us 🌍</p>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'packages' %}" class="dashboard-btn">
+            View Travel Packages
+        </a>
+
+    {% else %}
+
+    <section class="about">
+        <h2>About Our Travel Site</h2>
+        <p>
+            TravelSite is your one-stop solution for exploring the world.  
+            Book packages, plan trips, and make memories with ease.  
+            We provide curated travel experiences for everyone!
+        </p>
+    </section>
+      <div class="dashboard-actions">
+            <a href="{% url 'register' %}" class="dashboard-btn">Register</a>
+            <a href="{% url 'login' %}" class="dashboard-btn login-btn">Login</a>
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}
